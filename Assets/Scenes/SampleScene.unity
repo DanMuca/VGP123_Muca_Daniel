@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 26411760}
   - component: {fileID: 26411761}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 128907826}
   - component: {fileID: 128907827}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 326657454}
   - component: {fileID: 326657455}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,6 +592,8 @@ GameObject:
   - component: {fileID: 473285844}
   - component: {fileID: 473285847}
   - component: {fileID: 473285848}
+  - component: {fileID: 473285849}
+  - component: {fileID: 473285850}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -679,9 +681,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 473285843}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8619442, y: -2.707961, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 601460588}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -723,6 +726,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ab149dd26545a6428654b01222ec1a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &473285849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473285843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba7e114bdcc133f45a7c111b30a94452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  verbose: 1
+  isGrounded: 0
+  speed: 0
+  jumpForce: 0
+  groundCheckRadius: 0.2
+  isGroundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  groundCheck: {fileID: 601460588}
+--- !u!95 &473285850
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473285843}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 301417132d785494eb542120e3cc2fe7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &497103226
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +881,36 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &601460587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 601460588}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &601460588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601460587}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 473285846}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &644773467
@@ -1057,7 +1130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 754666749}
   - component: {fileID: 754666750}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1171,7 +1244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1080548720}
   - component: {fileID: 1080548721}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1285,7 +1358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1114655069}
   - component: {fileID: 1114655070}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1627,7 +1700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1714716574}
   - component: {fileID: 1714716575}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1741,7 +1814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1738290019}
   - component: {fileID: 1738290020}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1798,7 +1871,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1828496904}
   - component: {fileID: 1828496903}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grass Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1869,7 +1942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1841544242}
   - component: {fileID: 1841544243}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2017,7 +2090,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1936451146}
   - component: {fileID: 1936451147}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2074,7 +2147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1999933857}
   - component: {fileID: 1999933858}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2188,7 +2261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2023120810}
   - component: {fileID: 2023120811}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2245,7 +2318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2072665948}
   - component: {fileID: 2072665949}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2302,7 +2375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2085788935}
   - component: {fileID: 2085788936}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

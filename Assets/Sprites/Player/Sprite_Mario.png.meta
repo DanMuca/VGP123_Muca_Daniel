@@ -13,7 +13,7 @@ TextureImporter:
     second: Mario_Run2
   - first:
       213: 1554904934580016266
-    second: Sprite_Mario_3
+    second: Mario_SpecialAttack
   - first:
       213: -3171580361127328770
     second: Sprite_Mario_4
@@ -428,6 +428,27 @@ TextureImporter:
       bones: []
       spriteID: 5b48b1039e4205ab0800000000000000
       internalID: -5021473000565013323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_SpecialAttack
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 75
+        width: 26
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a84d42dbcc1249510800000000000000
+      internalID: 1554904934580016266
       vertices: []
       indices: 
       edges: []
