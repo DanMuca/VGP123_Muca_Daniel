@@ -105,13 +105,9 @@ public class Player : MonoBehaviour
             anim.SetBool("UpArrow", true);
         }
 
-        if (hInput < 0 )
+        if (hInput > 0 && sr.flipX || hInput < 0 && !sr.flipX)
         {
-            sr.flipX = true;
-        }
-        if (hInput > 0)
-        {
-            sr.flipX = false;
+            sr.flipX = !sr.flipX;
         }
 
     }
